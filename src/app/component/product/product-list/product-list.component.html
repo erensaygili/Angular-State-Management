@@ -1,0 +1,30 @@
+<div class="row mt-2">
+    <div class="col-10"></div>
+    <div class="col-2">
+        <button class="btn btn-primary" routerLink="/product/product-add"> Product Add</button>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+
+                    <th scope="col">Name</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Unit Price</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let product of products let index=index">
+                <tr>
+                    <td>{{product.name}}</td>
+                    <td>{{product.stock}}</td>
+                    <td>{{product.unitPrice}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

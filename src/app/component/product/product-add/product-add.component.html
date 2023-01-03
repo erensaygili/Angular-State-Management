@@ -1,0 +1,23 @@
+<div class="container col-md-4 offset-4 mt-4">
+    <form #addForm="ngForm" (ngSubmit)="addProduct()">
+        <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label">Product Name</label>
+            <input type="text" ngModel class="form-control" required minlength="3" name="name" id="name">
+        </div>
+        <div class="form-group mt-2">
+            <label for="exampleInputPassword1" class="form-label">İmage URl</label>
+            <input type="text" ngModel class="form-control" name="imageUrl" id="imageUrl">
+        </div>
+        <div class="form-group mt-2">
+            <label for="exampleInputPassword1" class="form-label">Unit Price</label>
+            <input type="number" ngModel class="form-control" required minlength="0" name="unitPrice" id="unitPrice">
+        </div>
+        <div class="form-group mt-2">
+            <label for="exampleInputPassword1" class="form-label">Stock</label>
+            <input type="number" ngModel class="form-control" required minlength="0" name="stock" id="stock">
+        </div>
+        <div class="form-group mt-2">
+            <button type="submit" class="btn btn-success w-100" [disabled]="!addForm.valid">Submit</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,15 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3 mt-4" *ngFor="let product of products let index=index">
+            <div class="card " style="width: 18rem;">
+                <img src="{{product.imageUrl}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <span class="card-text"> Stock: {{product.stock}}</span>
+                    <p class="card-text"> Price: {{product.unitPrice}}</p>
+                    <a (click)="addBasket(product)" class="btn btn-primary">Add Basket</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
